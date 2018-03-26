@@ -13,7 +13,7 @@ const app = {
   start(opt) {
     // 添加中间件
     spa.add(rest(opt))
-    // spa.add(history())
+    spa.add(history())
     spa.add(rewrite(opt))
     spa.add(filter.mw)
     filter.add(AuthFilter)
