@@ -7,7 +7,7 @@ import NotFound from "../src/module/404.js";
 
 app.start({
   matchers: [
-    '/user/:uid/:gid'
+    '/user/:uid'
   ],
   rules: [
     {
