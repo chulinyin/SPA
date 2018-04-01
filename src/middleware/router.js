@@ -7,7 +7,7 @@ function router(opt) {
   return function (context, next) {
     console.log('router middleware dispatched')
     
-    let name = context.hash.pathname
+    let name = context.hash && context.hash.pathname|| context.request.pathname
     let module = routers[name]
     if(!module) {
       window.location.hash = '#/404'

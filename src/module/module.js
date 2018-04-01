@@ -1,3 +1,4 @@
+// 模块基类
 class Module {
   constructor(config) {
     this._parent = config.parent
@@ -15,10 +16,11 @@ class Module {
   refresh() {}
 
   hide() {
-    if(this._body) {
-      let fragment = document.createDocumentFragment()
-      fragment.appendChild(this._body)
-    }
+    // 缓存一下？
+    // if(this._body) {
+    //   let fragment = document.createDocumentFragment()
+    //   fragment.appendChild(this._body)
+    // }
   }
 }
 

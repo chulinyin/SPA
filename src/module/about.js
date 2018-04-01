@@ -1,6 +1,6 @@
 import Module from './module'
 
-class Home extends Module {
+class About extends Module {
   build(opt) {
     super.build(opt)
     this._body = document.createElement('div')
@@ -12,4 +12,4 @@ class Home extends Module {
   }
 }
 
-export default Home;
+export default About;

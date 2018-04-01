@@ -20,7 +20,8 @@ function rewrite(opt) {
     }
     if(matcher instanceof RegExp) {
       it.matcher = (ctx) => {
-        return matcher.test(ctx.hash.pathname)
+        console.log(ctx)
+        return matcher.test(ctx.hash && ctx.hash.pathname || ctx.request.pathname)
       }
       return
     }
