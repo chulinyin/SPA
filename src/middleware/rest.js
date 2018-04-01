@@ -15,6 +15,7 @@ function rest(opt) {
       return '([^/]+?)'
     })
     rest.matcher = new RegExp(`^${reg}$`, 'gi')
+    console.log('reg', reg, rest.matcher)
     return rest
   }
   

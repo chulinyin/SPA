@@ -34,8 +34,9 @@ const app = {
     let activeEle= null
     function activeNavigation(context) {
       const selector = `[href*="#${context.hash && context.hash.pathname|| context.request.pathname}"]`
-      const targetEle = menuEle.querySelector(selector).parentElement
-      if(activeEle !== targetEle) {
+      const ele = menuEle.querySelector(selector)
+      const targetEle = ele && ele.parentElement
+      if(targetEle && activeEle !== targetEle) {
         activeEle && (activeEle.classList.remove('active'))
         targetEle.classList.add('active')
         activeEle = targetEle

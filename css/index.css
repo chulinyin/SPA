@@ -80,3 +80,20 @@ html, body {
 #app .content {
   padding: 100px;
 }
+
+/* 关于 */
+.about-content .submenu li {
+  display: inline-block;
+  margin-right: 40px;
+  text-decoration: underline;
+}
+
+.about-content .submenu li.active,
+.about-content .submenu li:hover {
+  color: #5482ee;
+}
+
+.about-content .title {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}

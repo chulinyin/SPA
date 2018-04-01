@@ -1,7 +1,7 @@
 // 模块基类
 class Module {
   constructor(config) {
-    this._parent = config.parent
+    this._parent = config.parent || config._body.querySelector('.child')
   }
 
   build(opt) {}
@@ -13,9 +13,18 @@ class Module {
     }
   }
 
-  refresh() {}
+  refresh() {
+    let childView = this._body.querySelector('.child')
+    if(childView) {
+      childView.innerHTML = ''
+    }
+  }
 
   hide() {
+    let childView = this._body.querySelector('.child')
+    if(childView) {
+      childView.innerHTML = ''
+    }
     // 缓存一下？
     // if(this._body) {
     //   let fragment = document.createDocumentFragment()

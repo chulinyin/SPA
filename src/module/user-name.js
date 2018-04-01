@@ -1,17 +1,18 @@
 import Module from './module'
 
-class User extends Module {
+class UserName extends Module {
+  // constructor(moduleInstance) {
+  //   // this.parent = moduleInstance.
+  // }
 
   build(opt) {
     super.build(opt)
     this._body = document.createElement('div')
     this._info = document.createElement('p')
     this._body.appendChild(this._info)
-    console.log('user build')
   }
 
   show(context) {
-    console.log('user show')
     super.show(context) 
     let hash = context.hash
     this._updateInfo(hash.restParams.uid)
@@ -24,8 +25,8 @@ class User extends Module {
   }
 
   _updateInfo(uid) {
-    this._info.innerHTML = `大家好，我是编号${uid} ～`
+    this._info.innerHTML = `大家好，我是username${uid} ～`
   }
 }
 
-export default User;
+export default UserName;
